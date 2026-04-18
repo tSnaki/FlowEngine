@@ -1,13 +1,10 @@
-use std::cell::RefCell;
-use std::rc::Rc;
 
 use easy_imgui::cgmath::Vector2;
-use easy_imgui::cgmath::num_traits::clamp;
 use easy_imgui::{Color, DrawFlags, WindowFlags, lbl, lbl_id};
-use easy_imgui_sdl3::sdl3::{Sdl, VideoSubsystem};
 use easy_imgui_sdl3::{Application, sdl3};
 use easy_imgui_sdl3::sdl3::video::{GLProfile, SwapInterval, WindowPos};
 
+#[allow(dead_code)]
 pub fn run() {
     let sdl = sdl3::init().unwrap();
 
@@ -63,7 +60,7 @@ impl Application for App {
     type UserEvent = ();
     type Data = ();
 
-    fn new(args: easy_imgui_sdl3::Args<'_, Self>) -> Self {
+    fn new(_args: easy_imgui_sdl3::Args<'_, Self>) -> Self {
         App
     }
 }

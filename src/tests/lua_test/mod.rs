@@ -1,5 +1,6 @@
 use mlua::Lua;
 
+#[allow(dead_code)]
 pub fn lun() {
     // Create Lua
     let lua = Lua::new();
